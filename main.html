@@ -6,7 +6,7 @@
     <title>Telegram Web App</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-        window.onload = function() {
+        function getUserData() {
             let tg = window.Telegram.WebApp;
             if (tg.initDataUnsafe.user) {
                 let userData = {
@@ -26,6 +26,7 @@
 </head>
 <body>
     <h1>Welcome to the Telegram Web App</h1>
+    <button onclick="getUserData();">인증정보확인</button>
     <pre id="user-info"></pre>
 </body>
 </html>
